@@ -1,0 +1,29 @@
+//
+//  PrefixHeader.pch
+//  IOSYueQiProject
+//
+//  Created by 敲代码mac1号 on 16/10/25.
+//  Copyright © 2016年 敲代码mac1号. All rights reserved.
+//
+#ifdef __OBJC__
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+
+
+
+#import "Header.h"
+#import "NewWorkingRequestManage.h"
+#import "MBProgressHUD+Add.h"
+#import "ShareView.h"
+#import "FMDBHelper.h"
+#import <Availability.h>//
+#import <HyphenateFullSDK/EMSDKFull.h>
+#import "EaseUI.h"
+#import "LgAccountTool.h"
+#import "LgAccount.h"
+#import "HelpManager.h"
+#import "BaseViewController.h"
+
+#endif /* PrefixHeader_pch */
+#endif

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FriendRequestsViewController">
+            <connections>
+                <outlet property="myTableView" destination="TSS-Cf-aiY" id="C5A-2D-XNf"/>
+                <outlet property="nosomthingImage" destination="uK6-U5-rso" id="zmQ-Ll-u9d"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TSS-Cf-aiY">
+                    <rect key="frame" x="0.0" y="5" width="375" height="662"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-nosomthing" translatesAutoresizingMaskIntoConstraints="NO" id="uK6-U5-rso">
+                    <rect key="frame" x="129" y="256" width="117" height="156"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="TSS-Cf-aiY" secondAttribute="bottom" id="EcB-nN-9pV"/>
+                <constraint firstAttribute="trailing" secondItem="TSS-Cf-aiY" secondAttribute="trailing" id="RTg-m7-wHw"/>
+                <constraint firstItem="uK6-U5-rso" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Yro-I0-dfB"/>
+                <constraint firstItem="TSS-Cf-aiY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="kqY-8f-l2d"/>
+                <constraint firstItem="TSS-Cf-aiY" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="5" id="moS-XM-eiq"/>
+                <constraint firstItem="uK6-U5-rso" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="yEG-Th-wci"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <point key="canvasLocation" x="476" y="260"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon-nosomthing" width="117" height="156"/>
+    </resources>
+</document>

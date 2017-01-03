@@ -1,0 +1,60 @@
+
+/* Class = "UILabel"; text = "局友性别"; ObjectID = "0yW-Cc-997"; */
+"0yW-Cc-997.text" = "局友性别";
+
+/* Class = "UIButton"; normalTitle = "包厢续费"; ObjectID = "7w3-PX-KDx"; */
+"7w3-PX-KDx.normalTitle" = "包厢续费";
+
+/* Class = "UITabBarItem"; title = "Item 1"; ObjectID = "FNx-5l-Z29"; */
+"FNx-5l-Z29.title" = "Item 1";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "GHA-Tr-D5M"; */
+"GHA-Tr-D5M.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "距离优先"; ObjectID = "Gko-ik-3w0"; */
+"Gko-ik-3w0.normalTitle" = "距离优先";
+
+/* Class = "UITextField"; placeholder = "🔍请输入约局编号"; ObjectID = "OY2-xQ-i6o"; */
+"OY2-xQ-i6o.placeholder" = "🔍请输入约局编号";
+
+/* Class = "UILabel"; text = "如果不写, 将是不限"; ObjectID = "RKk-fx-3IK"; */
+"RKk-fx-3IK.text" = "如果不写, 将是不限";
+
+/* Class = "UIButton"; normalTitle = "全程"; ObjectID = "TwN-Te-vkR"; */
+"TwN-Te-vkR.normalTitle" = "全程";
+
+/* Class = "UILabel"; text = "不限"; ObjectID = "VCA-78-OkY"; */
+"VCA-78-OkY.text" = "不限";
+
+/* Class = "UIButton"; normalTitle = "呼叫服务"; ObjectID = "VzD-Xo-QSM"; */
+"VzD-Xo-QSM.normalTitle" = "呼叫服务";
+
+/* Class = "UILabel"; text = "包厢号:3号小包"; ObjectID = "WCi-9h-BFX"; */
+"WCi-9h-BFX.text" = "包厢号:3号小包";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "bfc-5E-BdI"; */
+"bfc-5E-BdI.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "gfV-ht-iz4"; */
+"gfV-ht-iz4.text" = "Label";
+
+/* Class = "UITabBarItem"; title = "Item 2"; ObjectID = "i0g-23-azQ"; */
+"i0g-23-azQ.title" = "Item 2";
+
+/* Class = "UILabel"; text = "雀神"; ObjectID = "qSg-dD-tT9"; */
+"qSg-dD-tT9.text" = "雀神";
+
+/* Class = "UILabel"; text = "账号:12345678"; ObjectID = "qyY-0Y-gnb"; */
+"qyY-0Y-gnb.text" = "账号:12345678";
+
+/* Class = "UIButton"; normalTitle = "茶点正餐"; ObjectID = "sc6-6w-bCQ"; */
+"sc6-6w-bCQ.normalTitle" = "茶点正餐";
+
+/* Class = "UILabel"; text = "服务"; ObjectID = "wwu-8J-9Az"; */
+"wwu-8J-9Az.text" = "服务";
+
+/* Class = "UIButton"; normalTitle = "加水"; ObjectID = "xPs-Gl-8Ez"; */
+"xPs-Gl-8Ez.normalTitle" = "加水";
+
+/* Class = "UIButton"; normalTitle = "计时器"; ObjectID = "ypH-E3-Ajj"; */
+"ypH-E3-Ajj.normalTitle" = "计时器";

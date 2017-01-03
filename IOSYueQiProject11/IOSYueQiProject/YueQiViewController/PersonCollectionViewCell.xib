@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="PersonCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="61" height="96"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="61" height="96"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-head" translatesAutoresizingMaskIntoConstraints="NO" id="Jiv-zf-uro">
+                        <rect key="frame" x="7" y="14" width="46" height="46"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="46" id="9oM-kO-rlK"/>
+                            <constraint firstAttribute="width" constant="46" id="L1e-UW-kSa"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-house-owneryy.png" translatesAutoresizingMaskIntoConstraints="NO" id="Rsp-wP-Eyz">
+                        <rect key="frame" x="-2" y="5" width="27" height="24"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-boyyy-1" translatesAutoresizingMaskIntoConstraints="NO" id="DyK-c8-rf8">
+                        <rect key="frame" x="40" y="48" width="13" height="12"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="小王" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1hv-Rs-DhG">
+                        <rect key="frame" x="19" y="67" width="23" height="14"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="14" id="whA-3N-fcH"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NER-no-dRY">
+                        <rect key="frame" x="40" y="14" width="13" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="2hD-IV-pvq"/>
+                            <constraint firstAttribute="width" constant="13" id="CXD-xe-dxt"/>
+                        </constraints>
+                        <state key="normal" title="Button" image="icon-deletyy"/>
+                        <connections>
+                            <action selector="deleAction:" destination="gTV-IL-0wX" eventType="touchUpInside" id="DKx-ZP-OOd"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="已付款" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nIG-SQ-Olz">
+                        <rect key="frame" x="13.5" y="82" width="34" height="14"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" red="1" green="0.37647058820000001" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="DyK-c8-rf8" firstAttribute="trailing" secondItem="Jiv-zf-uro" secondAttribute="trailing" id="Cr8-kl-Ebg"/>
+                <constraint firstItem="nIG-SQ-Olz" firstAttribute="top" secondItem="1hv-Rs-DhG" secondAttribute="bottom" constant="1" id="CxF-dQ-jdJ"/>
+                <constraint firstItem="1hv-Rs-DhG" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="G8a-fQ-58A"/>
+                <constraint firstItem="nIG-SQ-Olz" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="M6l-Yg-4h6"/>
+                <constraint firstItem="Jiv-zf-uro" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="PMl-KY-vQs"/>
+                <constraint firstItem="NER-no-dRY" firstAttribute="top" secondItem="Jiv-zf-uro" secondAttribute="top" id="kKu-Up-rVT"/>
+                <constraint firstItem="Rsp-wP-Eyz" firstAttribute="top" secondItem="Jiv-zf-uro" secondAttribute="top" constant="-9" id="qwl-KZ-ych"/>
+                <constraint firstItem="Rsp-wP-Eyz" firstAttribute="bottom" secondItem="Jiv-zf-uro" secondAttribute="bottom" id="tjk-Oi-4ng"/>
+                <constraint firstItem="DyK-c8-rf8" firstAttribute="bottom" secondItem="Jiv-zf-uro" secondAttribute="bottom" id="ujK-Ko-11r"/>
+                <constraint firstItem="Rsp-wP-Eyz" firstAttribute="leading" secondItem="Jiv-zf-uro" secondAttribute="leading" constant="-9" id="uwg-aJ-Egi"/>
+                <constraint firstAttribute="bottom" secondItem="1hv-Rs-DhG" secondAttribute="bottom" constant="15" id="vGb-ua-Fcb"/>
+                <constraint firstItem="NER-no-dRY" firstAttribute="trailing" secondItem="DyK-c8-rf8" secondAttribute="trailing" id="ylN-mJ-lLe"/>
+                <constraint firstItem="1hv-Rs-DhG" firstAttribute="top" secondItem="Jiv-zf-uro" secondAttribute="bottom" constant="7" id="zEP-z2-dsY"/>
+            </constraints>
+            <size key="customSize" width="61" height="96"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="tjk-Oi-4ng"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="deleBtn" destination="NER-no-dRY" id="Ike-Dj-BNs"/>
+                <outlet property="genderView" destination="DyK-c8-rf8" id="bej-Xb-b6w"/>
+                <outlet property="hatView" destination="Rsp-wP-Eyz" id="bef-Bq-ULu"/>
+                <outlet property="headView" destination="Jiv-zf-uro" id="4pr-4e-Ygm"/>
+                <outlet property="nameLabel" destination="1hv-Rs-DhG" id="5lv-AP-O9S"/>
+                <outlet property="payLabel" destination="nIG-SQ-Olz" id="Gmn-rf-I7t"/>
+            </connections>
+            <point key="canvasLocation" x="566.5" y="309"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="icon-boyyy-1" width="13" height="12"/>
+        <image name="icon-deletyy" width="15" height="15"/>
+        <image name="icon-head" width="85" height="85"/>
+        <image name="icon-house-owneryy.png" width="27" height="24"/>
+    </resources>
+</document>

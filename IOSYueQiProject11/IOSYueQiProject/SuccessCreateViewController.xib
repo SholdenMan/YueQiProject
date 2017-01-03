@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SuccessCreateViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="创建成功" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sAI-bM-wWT">
+                    <rect key="frame" x="155" y="260" width="66" height="20"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" red="0.056317567825317383" green="0.69915193319320679" blue="0.70961755514144897" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-tickyy" translatesAutoresizingMaskIntoConstraints="NO" id="hj2-NC-5c2">
+                    <rect key="frame" x="158" y="184" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="hj2-NC-5c2" secondAttribute="height" multiplier="1:1" id="6eb-ac-6NY"/>
+                        <constraint firstAttribute="height" constant="60" id="RxJ-0Z-KDR"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FCV-Ao-VwG">
+                    <rect key="frame" x="113" y="296" width="150" height="45"/>
+                    <color key="backgroundColor" red="0.056317567825317383" green="0.69915193319320679" blue="0.70961755514144897" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <state key="normal" title="邀请局多多好友" backgroundImage="bg-anniuyy">
+                        <color key="titleColor" red="0.96460121870000004" green="0.96476620440000005" blue="0.96459084750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="inviteFriendAction:" destination="-1" eventType="touchUpInside" id="m6L-bC-bfW"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="分享至" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ukw-n5-ESY">
+                    <rect key="frame" x="166" y="530" width="43" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="83p-ms-hMg">
+                    <rect key="frame" x="179" y="573" width="16" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="16" id="DNH-4t-ok7"/>
+                    </constraints>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6k3-Dt-s4m">
+                    <rect key="frame" x="88" y="569" width="39" height="39"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="39" id="8Mj-x4-bWB"/>
+                        <constraint firstAttribute="width" constant="39" id="VZN-Y0-B2f"/>
+                    </constraints>
+                    <state key="normal" image="icon-WeChatyyy"/>
+                    <connections>
+                        <action selector="shareWX:" destination="-1" eventType="touchUpInside" id="NGf-Pm-VGt"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QAx-K1-hN0">
+                    <rect key="frame" x="195" y="569" width="39" height="39"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="39" id="3ua-CM-ifW"/>
+                    </constraints>
+                    <state key="normal" title="Button" image="icon- Tweetyy"/>
+                    <connections>
+                        <action selector="shareWB:" destination="-1" eventType="touchUpInside" id="7TY-Bx-DEx"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sfJ-Il-yXm">
+                    <rect key="frame" x="247" y="569" width="39" height="39"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="39" id="bWM-rE-ggw"/>
+                    </constraints>
+                    <state key="normal" title="Button" image="icon-Friendsyyy"/>
+                    <connections>
+                        <action selector="shareQQ:" destination="-1" eventType="touchUpInside" id="eoW-ir-xRK"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jaV-LU-hiV">
+                    <rect key="frame" x="140" y="569" width="39" height="39"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="39" id="5po-a6-NfN"/>
+                        <constraint firstAttribute="height" constant="39" id="7V7-xl-gfz"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="39" id="8n7-bH-npt"/>
+                    </constraints>
+                    <state key="normal" title="Button" image="icon-qqyy"/>
+                    <connections>
+                        <action selector="shareWXP:" destination="-1" eventType="touchUpInside" id="wmi-Qj-WOq"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="ukw-n5-ESY" secondAttribute="bottom" constant="120" id="41P-7M-WYz"/>
+                <constraint firstItem="FCV-Ao-VwG" firstAttribute="centerX" secondItem="sAI-bM-wWT" secondAttribute="centerX" id="7u7-ek-bzB"/>
+                <constraint firstItem="sfJ-Il-yXm" firstAttribute="leading" secondItem="QAx-K1-hN0" secondAttribute="trailing" constant="13" id="EBG-RK-lKh"/>
+                <constraint firstItem="6k3-Dt-s4m" firstAttribute="centerY" secondItem="83p-ms-hMg" secondAttribute="centerY" id="Lp2-fE-HZH"/>
+                <constraint firstItem="ukw-n5-ESY" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="UcI-F4-Xjt"/>
+                <constraint firstItem="83p-ms-hMg" firstAttribute="leading" secondItem="jaV-LU-hiV" secondAttribute="trailing" id="WHP-0o-k0w"/>
+                <constraint firstItem="sAI-bM-wWT" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Xfx-1y-8Mz"/>
+                <constraint firstItem="jaV-LU-hiV" firstAttribute="leading" secondItem="6k3-Dt-s4m" secondAttribute="trailing" constant="13" id="bEA-bo-4Eb"/>
+                <constraint firstItem="QAx-K1-hN0" firstAttribute="centerY" secondItem="83p-ms-hMg" secondAttribute="centerY" id="cEC-yl-K17"/>
+                <constraint firstItem="hj2-NC-5c2" firstAttribute="centerX" secondItem="sAI-bM-wWT" secondAttribute="centerX" id="gd7-WT-7Gh"/>
+                <constraint firstItem="83p-ms-hMg" firstAttribute="centerX" secondItem="ukw-n5-ESY" secondAttribute="centerX" id="hzH-4A-PMN"/>
+                <constraint firstItem="sAI-bM-wWT" firstAttribute="top" secondItem="hj2-NC-5c2" secondAttribute="bottom" constant="16" id="lzG-Yr-3gt"/>
+                <constraint firstItem="sfJ-Il-yXm" firstAttribute="centerY" secondItem="83p-ms-hMg" secondAttribute="centerY" id="m4l-Jh-neV"/>
+                <constraint firstItem="83p-ms-hMg" firstAttribute="top" secondItem="ukw-n5-ESY" secondAttribute="bottom" constant="26" id="q6n-e9-uPp"/>
+                <constraint firstItem="jaV-LU-hiV" firstAttribute="centerY" secondItem="83p-ms-hMg" secondAttribute="centerY" id="qUW-Ij-OVw"/>
+                <constraint firstItem="FCV-Ao-VwG" firstAttribute="top" secondItem="sAI-bM-wWT" secondAttribute="bottom" constant="16" id="rOo-2a-1ss"/>
+                <constraint firstItem="sAI-bM-wWT" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-64" id="xP6-uw-Fif"/>
+                <constraint firstItem="QAx-K1-hN0" firstAttribute="leading" secondItem="83p-ms-hMg" secondAttribute="trailing" id="zJ2-Lg-QL0"/>
+            </constraints>
+            <point key="canvasLocation" x="33.5" y="86.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="bg-anniuyy" width="150" height="45"/>
+        <image name="icon- Tweetyy" width="39" height="39"/>
+        <image name="icon-Friendsyyy" width="39" height="39"/>
+        <image name="icon-WeChatyyy" width="39" height="39"/>
+        <image name="icon-qqyy" width="39" height="39"/>
+        <image name="icon-tickyy" width="54" height="54"/>
+    </resources>
+</document>
