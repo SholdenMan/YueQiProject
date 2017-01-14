@@ -23,7 +23,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <textField opaque="NO" clipsSubviews="YES" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="输入登录密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cx6-nq-QIQ">
-                    <rect key="frame" x="43" y="316" width="289" height="40"/>
+                    <rect key="frame" x="43" y="277" width="289" height="40"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="czI-ga-HMU"/>
                     </constraints>
@@ -31,7 +31,7 @@
                     <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ovx-zx-s1q">
-                    <rect key="frame" x="40" y="381" width="295" height="45"/>
+                    <rect key="frame" x="40" y="342" width="295" height="45"/>
                     <state key="normal" title="登录" backgroundImage="icon-btn-bg">
                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
@@ -40,7 +40,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dxM-GX-1i9">
-                    <rect key="frame" x="279" y="438" width="56" height="27"/>
+                    <rect key="frame" x="279" y="399" width="56" height="27"/>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <state key="normal" title="忘记密码?">
                         <color key="titleColor" red="0.054901960784313725" green="0.69803921568627447" blue="0.70980392156862748" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -49,18 +49,21 @@
                         <action selector="forgetAction:" destination="-1" eventType="touchUpInside" id="MRr-s2-hP3"/>
                     </connections>
                 </button>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-zhuce-icon" translatesAutoresizingMaskIntoConstraints="NO" id="GEE-Lz-s7o">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="201"/>
+                <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-logollls" translatesAutoresizingMaskIntoConstraints="NO" id="GEE-Lz-s7o">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="162"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="GEE-Lz-s7o" secondAttribute="height" multiplier="125:54" id="ORs-py-YiR"/>
+                    </constraints>
                 </imageView>
-                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login-logo-top" translatesAutoresizingMaskIntoConstraints="NO" id="4NI-lw-Hyl">
-                    <rect key="frame" x="155.5" y="169" width="64" height="64"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-logoggl" translatesAutoresizingMaskIntoConstraints="NO" id="4NI-lw-Hyl">
+                    <rect key="frame" x="155" y="130" width="64" height="64"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="64" id="SZ8-n0-7B4"/>
                         <constraint firstAttribute="width" secondItem="4NI-lw-Hyl" secondAttribute="height" multiplier="1:1" id="eFB-hZ-7fo"/>
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fPD-Nd-c9J">
-                    <rect key="frame" x="43" y="313" width="289" height="1"/>
+                    <rect key="frame" x="43" y="274" width="289" height="1"/>
                     <color key="backgroundColor" red="0.84313725490196079" green="0.84313725490196079" blue="0.84313725490196079" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="1" id="h2d-2k-OtD"/>
@@ -70,7 +73,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <textField opaque="NO" clipsSubviews="YES" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="输入手机号码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bQa-kN-R6r">
-                    <rect key="frame" x="43" y="273" width="289" height="40"/>
+                    <rect key="frame" x="43" y="234" width="289" height="40"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="Y5P-zr-073"/>
                     </constraints>
@@ -78,7 +81,7 @@
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1j6-IY-Nuk">
-                    <rect key="frame" x="43" y="356" width="289" height="1"/>
+                    <rect key="frame" x="43" y="317" width="289" height="1"/>
                     <color key="backgroundColor" red="0.84313725490000002" green="0.84313725490000002" blue="0.84313725490000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="1" id="6E5-hA-Ymu"/>
@@ -89,7 +92,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WYo-Lh-y9S">
-                    <rect key="frame" x="40" y="438" width="30" height="27"/>
+                    <rect key="frame" x="40" y="399" width="30" height="27"/>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <state key="normal" title="注册">
                         <color key="titleColor" red="0.054901960784313725" green="0.69803921568627447" blue="0.70980392156862748" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -130,8 +133,8 @@
         </view>
     </objects>
     <resources>
+        <image name="bg-logollls" width="375" height="162"/>
         <image name="icon-btn-bg" width="296" height="45"/>
-        <image name="icon-zhuce-icon" width="375" height="201"/>
-        <image name="login-logo-top" width="87" height="87"/>
+        <image name="icon-logoggl" width="87" height="87"/>
     </resources>
 </document>

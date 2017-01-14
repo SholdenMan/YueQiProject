@@ -21,12 +21,16 @@
     self.store_name = [NSString stringWithFormat:@"%@", keyedValues[@"store_name"]];
     self.icon = [NSString stringWithFormat:@"%@", keyedValues[@"icon"]];
 //    self.name = [NSString stringWithFormat:@"%@", keyedValues[@"sub_orders"][@"name"]];
-    for (NSDictionary *dic in keyedValues[@"sub_orders"]) {
-        OrdersModel *model = [[OrdersModel alloc] init];
-        [model setValuesForKeysWithDictionary:dic];
-        [self.orderArray addObject:model];
-    }
-    self.store_id = [NSString stringWithFormat:@"%@", keyedValues[@"store_id"]];
+//    if ([keyedValues[@"sub_orders"] isEqualToString:@"<NULL>"]) {
+//        NSLog(@"111");
+//    }else{
+        for (NSDictionary *dic in keyedValues[@"sub_orders"]) {
+            OrdersModel *model = [[OrdersModel alloc] init];
+            [model setValuesForKeysWithDictionary:dic];
+            [self.orderArray addObject:model];
+        }
+//    }
+        self.store_id = [NSString stringWithFormat:@"%@", keyedValues[@"store_id"]];
     self.order_no = [NSString stringWithFormat:@"%@", keyedValues[@"order_no"]];
     self.trading_no = [NSString stringWithFormat:@"%@", keyedValues[@"trading_no"]];
     self.begin_time = [NSString stringWithFormat:@"%@", keyedValues[@"begin_time"]];

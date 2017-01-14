@@ -72,7 +72,7 @@
 //    if ([self.model.state isEqualToString:@"3"]) {
 //        self.title = @"进行中";
 //    }else{
-        self.title = @"等待开始";
+        self.title = @"进行中";
 //    }
     [self.myTableView registerNib:[UINib nibWithNibName:@"ListTwoTableViewCell" bundle:nil] forCellReuseIdentifier:@"listTwo"];
     [self.myCollectionView registerNib:[UINib nibWithNibName:@"PersonCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"cell"];

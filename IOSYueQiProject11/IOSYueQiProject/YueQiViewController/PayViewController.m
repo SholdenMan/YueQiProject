@@ -102,7 +102,7 @@
 
         [NewWorkingRequestManage requestGetWith:urlStr parDic:nil finish:^(id responseObject) {
             [MBProgressHUD hideHUDForView:self.view animated:YES];
-
+            NSLog(@"------%@", responseObject);
             PayModel *model = [[PayModel alloc] init];
             [model setValuesForKeysWithDictionary:responseObject];
             [self.payModel setValuesForKeysWithDictionary:responseObject];

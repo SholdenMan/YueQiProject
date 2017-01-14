@@ -11,7 +11,7 @@
 
 #define UploadFile @"http://static.binvshe.com:2016/res/"
 
-#define YueQiApp @"http://17178.xmappservice.com"
+#define YueQiApp @"http://server.jutoto.com"
 
 #import "BaseViewController.h"
 #import "LgAccount.h"

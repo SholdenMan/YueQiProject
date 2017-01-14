@@ -334,10 +334,26 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
 
 -(void)application:(UIApplication *)application performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(void (^)(BOOL))completionHandler {
     if ([shortcutItem.type isEqualToString:@"YueQiSponsor"]) {
-        SponsorViewController *sponsorVC = [[UIStoryboard storyboardWithName:@"Sponsor" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"sponsor"];
-        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:sponsorVC];
-        sponsorVC.title = @"茶馆约局";
-        self.window.rootViewController = nav;
+        if (![[NSUserDefaults standardUserDefaults] boolForKey:@"firstLaunch"]) {
+            [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"firstLaunch"];
+            FristViewController *fristVC = [[FristViewController alloc] init];
+            UINavigationController *navigation = [[UINavigationController alloc] initWithRootViewController:fristVC];
+            self.window.rootViewController = navigation;
+        }else {
+            
+            LoginViewController *logVC = [[LoginViewController alloc] init];
+//            MainTabBarViewController *rootController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"main"];
+            if (![userDef objectForKey:@"userID"]) {
+                self.window.rootViewController = logVC;
+            } else {
+                SponsorViewController *sponsorVC = [[UIStoryboard storyboardWithName:@"Sponsor" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"sponsor"];
+                UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:sponsorVC];
+                sponsorVC.title = @"茶馆约局";
+                self.window.rootViewController = nav;
+            }
+            
+        }
+
         NSLog(@"打开了软件");
     }else if([shortcutItem.type isEqualToString:@"YueQiShare"]){
         NSLog(@"分享了");

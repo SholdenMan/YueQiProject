@@ -25,25 +25,7 @@
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     
     //[userDef objectForKey:@"userID"]
-    //去验证token
-    NSString *timeStr = [HelpManager getCurrentTimestamp];
-    NSString *oldTime = [userDef objectForKey:@"expires_at"];
-//    if ( oldTime.floatValue - timeStr.floatValue *1000  > timeDay){
-//        NSLog(@"%@---%@", oldTime, timeStr);
-//        [NewWorkingRequestManage requestNoHeadeGetWith:TokenUrl parDic:nil finish:^(id responseObject) {
-//            NSLog(@"%@", responseObject);
-//            [userDef setObject:responseObject[@"access_token"] forKey:@"token"];
-//            [userDef setObject:responseObject[@"expires_at"] forKey:@"expires_at"];
-//        } error:^(NSError *error) {
-//            MyLog(@"%@", [NewWorkingRequestManage newWork].errorStr);
-//            
-//        }];
-//    }else{
-//        return;
-//    }
-
-    
-    
+    [NewWorkingRequestManage refushToken];
     //加密
     [manager.requestSerializer setValue:[[HelpManager shareHelpManager ] getDataWithEvent:@"GET" WithUrl:urlStr]forHTTPHeaderField:@"Authorization"];
     [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
@@ -433,6 +415,55 @@
     }];
 }
 
++ (void)refushToken{
+    //去验证token
+    NSString *timeStr = [HelpManager getCurrentTimestamp];
+    NSString *oldTime = [userDef objectForKey:@"expires_at"];
+    if ( oldTime.floatValue - timeStr.floatValue *1000  > timeDay){
+        NSLog(@"%@---%@", oldTime, timeStr);
+        [NewWorkingRequestManage requestNoHeadeGetWith:TokenUrl parDic:nil finish:^(id responseObject) {
+            NSLog(@"%@", responseObject);
+            [userDef setObject:responseObject[@"access_token"] forKey:@"token"];
+            [userDef setObject:responseObject[@"expires_at"] forKey:@"expires_at"];
+        } error:^(NSError *error) {
+            MyLog(@"%@", [NewWorkingRequestManage newWork].errorStr);
+            
+        }];
+    }else{
+        return;
+    }
 
+}
+
++(void)showError:(NSError *)error{
+        MyLog(@"%@", error);
+            //数据请求失败，返回错误信息原因 error
+            NSInteger errorCode = [error code];
+            NSError *customerError = nil;
+            switch (errorCode) {
+                case -1011:
+                {
+                    NSData *errorData = [error.userInfo objectForKey:@"com.alamofire.serialization.response.error.data"];
+                    NSDictionary *errDict =[NSJSONSerialization JSONObjectWithData:errorData options:0 error:nil];
+                    if ([errDict objectForKey:@"message"]) {
+                        customerError = [[NSError alloc] initWithDomain:errDict[@"message"] code:[error code]userInfo:nil];
+                        [NewWorkingRequestManage newWork].errorStr = [NSString stringWithFormat:@"%@", errDict[@"message"]];
+                        MyLog(@"%@", errDict[@"message"]);
+                    }else{
+                        customerError = [[NSError alloc] initWithDomain:error.localizedDescription code:[error code] userInfo:nil];
+                    }
+                    break;
+                }
+                default:
+                {
+                    NSString *dic = [error.userInfo objectForKey:@"NSLocalizedDescription"];
+                    customerError = [[NSError alloc] initWithDomain:error.localizedDescription code:[error code] userInfo:nil];
+                    [NewWorkingRequestManage newWork].errorStr = dic;
+                    break;
+                }
+            }
+        
+    
+}
 
 @end

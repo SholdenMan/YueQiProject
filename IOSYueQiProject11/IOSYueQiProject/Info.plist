@@ -17,7 +17,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0.8</string>
+	<string>1.1.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleURLTypes</key>
@@ -111,14 +111,6 @@
 			<string>发起约局</string>
 			<key>UIApplicationShortcutItemType</key>
 			<string>YueQiSponsor</string>
-		</dict>
-		<dict>
-			<key>UIApplicationShortcutItemIconType</key>
-			<string>UIApplicationShortcutIconTypeShare</string>
-			<key>UIApplicationShortcutItemTitle</key>
-			<string>分享局多多</string>
-			<key>UIApplicationShortcutItemType</key>
-			<string>YueQiShare</string>
 		</dict>
 	</array>
 	<key>UIMainStoryboardFile</key>

@@ -90,8 +90,8 @@
 - (IBAction)payAction:(UIButton *)sender {
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     NSString *urlStr = [NSString stringWithFormat:@"%@%@/renewal", getBoxRenewalInfor, self.game_id];
-    
-    [NewWorkingRequestManage requestPUTWith:urlStr parDic:nil finish:^(id responseObject) {
+    NSDictionary *dic = @{@"hours":@(allCount)};
+    [NewWorkingRequestManage requestPUTWith:urlStr parDic:dic finish:^(id responseObject) {
         PayViewController *payVC = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"pay"];
         UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:payVC];
         payVC.order_no =  [NSString stringWithFormat:@"%@", responseObject[@"order_no"]];
@@ -127,8 +127,8 @@
     allCount += 1;
     self.payTime.text = [NSString stringWithFormat:@"%ld", allCount];
     
-    self.allPrice.text = [NSString stringWithFormat:@"¥%.lf", allCount * [self.model.price floatValue]];
-    self.allPay.text = [NSString stringWithFormat:@"%.lf", allCount * [self.model.price floatValue]];
+    self.allPrice.text = [NSString stringWithFormat:@"¥%.2lf", allCount * [self.model.price floatValue]];
+    self.allPay.text = [NSString stringWithFormat:@"%.2lf", allCount * [self.model.price floatValue]];
 }
 
 //减
